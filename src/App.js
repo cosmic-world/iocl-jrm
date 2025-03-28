@@ -1603,7 +1603,11 @@ function App() {
     'Asanur Terminal',
   ];
 
-  console.log('selectedDest', selectedDest);
+  console.log(
+    'selectedDest',
+    selectedDest,
+    `${process.env.PUBLIC_URL}/asset/${'aastra_fuels_284353.html'}`,
+  );
 
   return (
     <div className="App d-flex flex-column vh-100 vw-100">
@@ -1887,18 +1891,18 @@ function App() {
           </div>
         </div>
       </div>
-      {selectedDest ? (
-        <iframe
-          src={`${process.env.PUBLIC_URL}/asset/${'aastra_fuels_284353.html'}`}
-          width="98%"
-          title="CBE-JRM" // Title for accessibility
-          className="iframe-style"
-          style={{
-            border: '1px solid gray',
-            borderRadius: '8px',
-          }}
-        />
-      ) : (
+      {/* {selectedDest ? ( */}
+      <iframe
+        src={`${process.env.PUBLIC_URL}/asset/${'aastra_fuels_284353.html'}`}
+        width="98%"
+        title="CBE-JRM" // Title for accessibility
+        className="iframe-style"
+        style={{
+          border: '1px solid gray',
+          borderRadius: '8px',
+        }}
+      />
+      {/* ) : (
         <div
           className="iframe-style"
           style={{
@@ -1915,7 +1919,7 @@ function App() {
         >
           No Destination Selected
         </div>
-      )}
+      )} */}
     </div>
   );
 }

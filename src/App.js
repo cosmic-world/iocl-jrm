@@ -1096,7 +1096,7 @@ function App() {
   ];
 
   const trichyList = [
-    'sri_ganesh_agency_133503.pdf',
+    '133503_sri_ganesh_agency.pdf',
     '133505_ilahi_agencies_lock_no_12024.pdf',
     '133507_rasheed_ali__sons.pdf',
     '133512_hajee_co_lock_no_11011.pdf',

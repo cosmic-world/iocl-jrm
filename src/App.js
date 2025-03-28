@@ -1633,7 +1633,7 @@ function App() {
           name="jrm"
           onChange={(e, newValue) => {
             setSelectedTerminal(newValue);
-            // setSelectedDest(null);
+            setSelectedDest(null);
           }}
           size="small"
           value={selectedTerminal}

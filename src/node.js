@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Specify the folder containing the files
-const folderPath = 'E:/TNSO-JRM/asanur'; // Replace with your folder path
+const folderPath = 'E:/TNSO-JRM/coimbatore'; // Replace with your folder path
 
 // Function to rename files to lowercase and save their names
 const renameFilesToLowercase = (folderPath) => {
@@ -15,7 +15,7 @@ const renameFilesToLowercase = (folderPath) => {
 
     files.forEach((file) => {
       const oldPath = path.join(folderPath, file);
-      const newFileName = file.toLowerCase(); // Convert filename to lowercase
+      const newFileName = file.replace(/\s+/g, '_').toLowerCase(); // Convert filename to lowercase
       const newPath = path.join(folderPath, newFileName);
 
       // Check if it's a file (not a folder)

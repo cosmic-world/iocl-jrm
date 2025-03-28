@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { TextField, Autocomplete } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -1604,12 +1604,6 @@ function App() {
     'Asanur Terminal',
   ];
 
-  console.log(
-    'selectedDest',
-    selectedDest,
-    `${process.env.PUBLIC_URL}/asset/${'aastra_fuels_284353.html'}`,
-  );
-
   return (
     <div className="App d-flex flex-column vh-100 vw-100">
       <div className="IOCLImage" aria-current="page" />
@@ -1892,18 +1886,18 @@ function App() {
           </div>
         </div>
       </div>
-      {/* {selectedDest ? ( */}
-      <iframe
-        src={`${window.location.origin}/asset/${'aastra_fuels_284353.html'}`}
-        width="98%"
-        title="CBE-JRM" // Title for accessibility
-        className="iframe-style"
-        style={{
-          border: '1px solid gray',
-          borderRadius: '8px',
-        }}
-      />
-      {/* ) : (
+      {selectedDest ? (
+        <iframe
+          src={`${window.location.origin}/asset/${selectedDest}`}
+          width="98%"
+          title="CBE-JRM" // Title for accessibility
+          className="iframe-style"
+          style={{
+            border: '1px solid gray',
+            borderRadius: '8px',
+          }}
+        />
+      ) : (
         <div
           className="iframe-style"
           style={{
@@ -1920,7 +1914,7 @@ function App() {
         >
           No Destination Selected
         </div>
-      )} */}
+      )}
     </div>
   );
 }

@@ -1888,6 +1888,7 @@ function App() {
       </div>
       {console.log(
         'directory',
+        selectedDest,
         `${process.env.PUBLIC_URL}/asset/${selectedDest}`,
       )}
       {selectedDest ? (

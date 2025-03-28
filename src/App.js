@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Autocomplete } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -1602,6 +1602,17 @@ function App() {
     'Sankari Terminal',
     'Asanur Terminal',
   ];
+
+  useEffect(() => {
+    setInterval(() => {
+      console.log(
+        'directory',
+        selectedDest,
+        // `${process.env.PUBLIC_URL}/asset/${selectedDest}`,
+      );
+    }, 1000);
+  }, [selectedDest]);
+
   return (
     <div className="App d-flex flex-column vh-100 vw-100">
       <div className="IOCLImage" aria-current="page" />
@@ -1633,7 +1644,7 @@ function App() {
           name="jrm"
           onChange={(e, newValue) => {
             setSelectedTerminal(newValue);
-            setSelectedDest(null);
+            // setSelectedDest(null);
           }}
           size="small"
           value={selectedTerminal}
@@ -1689,9 +1700,7 @@ function App() {
             },
           }}
           name="jrm"
-          onChange={(e, newValue) =>
-            newValue ? setSelectedDest(newValue.toLowerCase()) : null
-          }
+          onChange={(e, newValue) => setSelectedDest(newValue.toLowerCase())}
           size="small"
           value={selectedDest}
           renderInput={(params) => (
@@ -1886,14 +1895,9 @@ function App() {
           </div>
         </div>
       </div>
-      {console.log(
-        'directory',
-        selectedDest,
-        `${process.env.PUBLIC_URL}/asset/${selectedDest}`,
-      )}
       {selectedDest ? (
         <iframe
-          src={`${process.env.PUBLIC_URL}/asset/${selectedDest}`}
+          src={`${process.env.PUBLIC_URL}/asset/${'aastra_fuels_284353.html'}`}
           width="98%"
           title="CBE-JRM" // Title for accessibility
           className="iframe-style"

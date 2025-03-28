@@ -1893,7 +1893,7 @@ function App() {
       </div>
       {/* {selectedDest ? ( */}
       <iframe
-        src={`${process.env.PUBLIC_URL}/asset/${'aastra_fuels_284353.html'}`}
+        src={`/asset/${'aastra_fuels_284353.html'}`}
         width="98%"
         title="CBE-JRM" // Title for accessibility
         className="iframe-style"

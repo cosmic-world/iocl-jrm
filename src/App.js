@@ -1694,6 +1694,22 @@ function App() {
             height: 'fit-content',
           }}
         >
+          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
+            <div>
+              <SvgIcon color={'#71af26'} isSmallScreen={isSmallScreen} />
+              <FontAwesomeIcon
+                icon={faPlay}
+                style={{
+                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                  marginLeft: isSmallScreen ? '-24px' : '-37px',
+                  marginBottom: isSmallScreen ? '3px' : '5px',
+                  color: 'white',
+                }}
+              />
+            </div>
+            <label className="legend">Start Point / தொடக்க புள்ளி</label>
+          </div>
+
           <div className="d-flex flex-column align-items-center mx-2 m-md-2">
             <div>
               <SvgIcon color={'#6fab25'} isSmallScreen={isSmallScreen} />
@@ -1724,22 +1740,6 @@ function App() {
               />
             </div>
             <label className="legend">Hospital / மருத்துவமனை</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#36a5d6'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faStop}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-26px' : '-39px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">End Point / இறுதிப் புள்ளி</label>
           </div>
 
           <div className="d-flex flex-column align-items-center m-md-2 mx-1">
@@ -1844,18 +1844,18 @@ function App() {
 
           <div className="d-flex flex-column align-items-center m-md-2 mx-1">
             <div>
-              <SvgIcon color={'#71af26'} isSmallScreen={isSmallScreen} />
+              <SvgIcon color={'#36a5d6'} isSmallScreen={isSmallScreen} />
               <FontAwesomeIcon
-                icon={faPlay}
+                icon={faStop}
                 style={{
                   transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-24px' : '-37px',
+                  marginLeft: isSmallScreen ? '-26px' : '-39px',
                   marginBottom: isSmallScreen ? '3px' : '5px',
                   color: 'white',
                 }}
               />
             </div>
-            <label className="legend">Start Point / தொடக்க புள்ளி</label>
+            <label className="legend">End Point / இறுதிப் புள்ளி</label>
           </div>
         </div>
       </div>

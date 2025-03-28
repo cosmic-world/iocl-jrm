@@ -1689,7 +1689,7 @@ function App() {
           )}
         />
         <div
-          className="bg-white d-flex justify-content-around align-items-center flex-wrap legend-div"
+          className="bg-white d-none d-md-flex justify-content-around align-items-center flex-wrap legend-div"
           style={{
             height: 'fit-content',
           }}

@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SvgIcon from './SvgIcon';
 import Typewriter from 'typewriter-effect';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGasPump,
@@ -1892,8 +1893,8 @@ function App() {
         </div>
       </div>
       {/* {selectedDest ? ( */}
-      {/* <iframe
-        src={`/asset/${'aastra_fuels_284353.html'}`}
+      <iframe
+        src={`${window.location.origin}/asset/${'aastra_fuels_284353.html'}`}
         width="98%"
         title="CBE-JRM" // Title for accessibility
         className="iframe-style"
@@ -1901,7 +1902,7 @@ function App() {
           border: '1px solid gray',
           borderRadius: '8px',
         }}
-      /> */}
+      />
       {/* ) : (
         <div
           className="iframe-style"

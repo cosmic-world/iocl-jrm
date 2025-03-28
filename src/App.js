@@ -1886,6 +1886,10 @@ function App() {
           </div>
         </div>
       </div>
+      {console.log(
+        'directory',
+        `${process.env.PUBLIC_URL}/asset/${selectedDest}`,
+      )}
       {selectedDest ? (
         <iframe
           src={`${process.env.PUBLIC_URL}/asset/${selectedDest}`}

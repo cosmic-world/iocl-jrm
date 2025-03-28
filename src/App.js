@@ -1603,15 +1603,7 @@ function App() {
     'Asanur Terminal',
   ];
 
-  useEffect(() => {
-    setInterval(() => {
-      console.log(
-        'directory',
-        selectedDest,
-        // `${process.env.PUBLIC_URL}/asset/${selectedDest}`,
-      );
-    }, 1000);
-  }, [selectedDest]);
+  console.log('selectedDest', selectedDest);
 
   return (
     <div className="App d-flex flex-column vh-100 vw-100">

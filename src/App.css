@@ -1,32 +1,10 @@
 .App {
   text-align: center;
-  /* background: radial-gradient(circle, #f0b73d 60%, #98cfe9 40%); */
   background: radial-gradient(circle, rgb(158, 212, 103) 20%, #eedfbe 80%);
   align-items: center;
   justify-content: flex-start;
   margin: 0;
   position: relative;
-}
-* {
-  user-select: none;
-}
-.title {
-  font-family: 'Roboto';
-  font-size: 1.8vw;
-  font-weight: bold;
-  font-style: italic;
-}
-.title-small {
-  font-family: 'Roboto';
-  font-size: 1.6vw;
-  font-weight: bold;
-  font-style: italic;
-}
-.legend {
-  font-family: 'Calibri';
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
 }
 .IOCLImage {
   background: url(../public/IOCL.png);
@@ -39,6 +17,27 @@
   top: 0;
   left: 0;
 }
+* {
+  user-select: none;
+}
+.title {
+  font-family: Roboto;
+  font-size: 1.8vw;
+  font-weight: bold;
+  font-style: italic;
+}
+.title-small {
+  font-family: Roboto;
+  font-size: 1.6vw;
+  font-weight: bold;
+  font-style: italic;
+}
+.legend {
+  font-family: Calibri;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
 .title-bar {
   height: fit-content !important;
   width: 100vw;
@@ -49,17 +48,34 @@
   margin-bottom: 10px;
 }
 .iframe-style {
-  height: 58%;
+  flex: 1;
+  margin-bottom: 10px;
 }
+.container1 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
 .legend-div {
-  margin: 0px 20px;
+  margin: 0px;
   border-radius: 8px;
 }
-@media only screen and (max-width: 600px) {
-  .IOCLImage,
-  .title-bar {
-    height: 23vh;
-  }
+.legend-child {
+  padding: 3px;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+.accordion-button {
+  background-color: #cfe2ff !important;
+  box-shadow: none !important;
+  font-family: 'calibri';
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+.accordion-body {
+  padding: 3px !important;
+}
+@media only screen and (max-width: 980px) {
   .title {
     font-size: 4vw;
     margin-top: 2%;
@@ -69,14 +85,15 @@
     margin: 2%;
   }
   .IOCLImage {
-    background-position: center 5%;
+    max-height: 8vh;
   }
   .iframe-style {
-    /* height: 50%; */
-    flex: 1;
-    margin-bottom: 5px;
+    height: 1200px;
   }
   .legend {
     font-size: 12px;
+  }
+  .accordion-button {
+    font-size: 3.5vw;
   }
 }

@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SvgIcon from './SvgIcon';
 import Typewriter from 'typewriter-effect';
+import Accordion from 'react-bootstrap/Accordion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -1621,10 +1622,196 @@ function App() {
     'Sankari Terminal',
     'Asanur Terminal',
   ];
+  const legends = () => {
+    return (
+      <div className="container1 bg-white legend-div w-100">
+        <div className="d-flex flex-column align-items-center legend-child">
+          <div>
+            <SvgIcon color={'#71af26'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faPlay}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-24px' : '-37px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">Start Point / தொடக்க புள்ளி</label>
+        </div>
 
+        <div className="legend-child d-flex flex-column align-items-center">
+          <div>
+            <SvgIcon color={'#6fab25'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faGasPump}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-26px' : '-39px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">Petrol Pump / பெட்ரோல் பம்ப்</label>
+        </div>
+
+        <div className="legend-child d-flex flex-column align-items-center">
+          <div>
+            <SvgIcon color={'#c83a28'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faPlus}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-26px' : '-39px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">Hospital / மருத்துவமனை</label>
+        </div>
+
+        <div className="legend-child d-flex flex-column align-items-center">
+          <div>
+            <SvgIcon color={'#c83a28'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faCircleInfo}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-27px' : '-40px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">
+            High Risk Turn / அதிக ஆபத்து திருப்பம்
+          </label>
+        </div>
+
+        <div
+          className="legend-child d-flex flex-column align-items-center"
+          style={{ borderRight: 0 }}
+        >
+          <div>
+            <SvgIcon color={'#f0932f'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faCircleInfo}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-27px' : '-40px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">
+            Medium Risk Turn / நடுத்தர ஆபத்து திருப்பம்
+          </label>
+        </div>
+
+        <div
+          className="legend-child d-flex flex-column align-items-center"
+          style={{ borderBottom: 0 }}
+        >
+          <div>
+            <SvgIcon color={'#83d9ff'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-29px' : '-42px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">Market Place / சந்தை இடம்</label>
+        </div>
+
+        <div
+          className="legend-child d-flex flex-column align-items-center"
+          style={{ borderBottom: 0 }}
+        >
+          <div>
+            <SvgIcon color={'#37a8da'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faShield}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-27px' : '-40px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">Police / போலீஸ்</label>
+        </div>
+
+        <div
+          className="legend-child d-flex flex-column align-items-center"
+          style={{ borderBottom: 0 }}
+        >
+          <div>
+            <SvgIcon color={'#426877'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faSchool}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-29px' : '-42px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">School / பள்ளி</label>
+        </div>
+
+        <div
+          className="legend-child d-flex flex-column align-items-center"
+          style={{ borderBottom: 0 }}
+        >
+          <div>
+            <SvgIcon color={'#f0932f'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faBuildingColumns}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-28px' : '-41px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">College / கல்லூரி</label>
+        </div>
+
+        <div
+          className="legend-child d-flex flex-column align-items-center"
+          style={{ borderBottom: 0, borderRight: 0 }}
+        >
+          <div>
+            <SvgIcon color={'#36a5d6'} isSmallScreen={isSmallScreen} />
+            <FontAwesomeIcon
+              icon={faStop}
+              style={{
+                transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
+                marginLeft: isSmallScreen ? '-26px' : '-39px',
+                marginBottom: isSmallScreen ? '3px' : '5px',
+                color: 'white',
+              }}
+            />
+          </div>
+          <label className="legend">End Point / இறுதிப் புள்ளி</label>
+        </div>
+      </div>
+    );
+  };
   return (
     <div className="App d-flex flex-column vh-100 vw-100">
-      <div className="IOCLImage" aria-current="page" />
+      <div className="IOCLImage" />
       <div className="title-bar">
         <div className={`title`}>
           <Typewriter
@@ -1733,176 +1920,14 @@ function App() {
             />
           )}
         />
-        <div
-          className="bg-white d-none d-md-flex justify-content-around align-items-center flex-wrap legend-div"
-          style={{
-            height: 'fit-content',
-          }}
-        >
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#71af26'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faPlay}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-24px' : '-37px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">Start Point / தொடக்க புள்ளி</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center mx-2 m-md-2">
-            <div>
-              <SvgIcon color={'#6fab25'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faGasPump}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-26px' : '-39px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">Petrol Pump / பெட்ரோல் பம்ப்</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#c83a28'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faPlus}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-26px' : '-39px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">Hospital / மருத்துவமனை</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#c83a28'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faCircleInfo}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-27px' : '-40px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">
-              High Risk Turn / அதிக ஆபத்து திருப்பம்
-            </label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#f0932f'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faCircleInfo}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-27px' : '-40px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">
-              Medium Risk Turn / நடுத்தர ஆபத்து திருப்பம்
-            </label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#83d9ff'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-29px' : '-42px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">Market Place / சந்தை இடம்</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#37a8da'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faShield}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-27px' : '-40px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">Police / போலீஸ்</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#426877'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faSchool}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-29px' : '-42px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">School / பள்ளி</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#f0932f'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faBuildingColumns}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-28px' : '-41px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">College / கல்லூரி</label>
-          </div>
-
-          <div className="d-flex flex-column align-items-center m-md-2 mx-1">
-            <div>
-              <SvgIcon color={'#36a5d6'} isSmallScreen={isSmallScreen} />
-              <FontAwesomeIcon
-                icon={faStop}
-                style={{
-                  transform: isSmallScreen ? 'scale(0.8)' : 'scale(1)',
-                  marginLeft: isSmallScreen ? '-26px' : '-39px',
-                  marginBottom: isSmallScreen ? '3px' : '5px',
-                  color: 'white',
-                }}
-              />
-            </div>
-            <label className="legend">End Point / இறுதிப் புள்ளி</label>
-          </div>
-        </div>
+        <Accordion flush className="w-100">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              {'Key Legends On Route (Click to see details)'}
+            </Accordion.Header>
+            <Accordion.Body>{legends()}</Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </div>
       {selectedDest ? (
         <iframe

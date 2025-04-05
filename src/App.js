@@ -6,7 +6,7 @@ import './App.css';
 import SvgIcon from './SvgIcon';
 import Typewriter from 'typewriter-effect';
 import Accordion from 'react-bootstrap/Accordion';
-
+import { Cascader } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGasPump,
@@ -2016,15 +2016,66 @@ function App() {
   const [selectedDest, setSelectedDest] = useState(null);
   const [selectedTerminal, setSelectedTerminal] = useState(null);
   const isSmallScreen = useMediaQuery('(max-width:600px)');
-  const locationList = [
-    'All',
-    'Coimbatore Terminal',
-    'Madurai Terminal',
-    'Trichy Terminal',
-    'Sankari Terminal',
-    'Asanur Terminal',
-    'Tondiarpet Terminal',
+
+  const stateOfficeList = [
+    {
+      label: 'All',
+      value: 'All',
+    },
+    {
+      label: 'TNSO',
+      value: 'TNSO',
+      children: [
+        {
+          label: 'Coimbatore Terminal',
+          value: 'Coimbatore Terminal',
+        },
+        {
+          label: 'Madurai Terminal',
+          value: 'Madurai Terminal',
+        },
+        {
+          label: 'Trichy Terminal',
+          value: 'Trichy Terminal',
+        },
+        {
+          label: 'Sankari Terminal',
+          value: 'Sankari Terminal',
+        },
+        {
+          label: 'Asanur Terminal',
+          value: 'Asanur Terminal',
+        },
+        {
+          label: 'Tondiarpet Terminal',
+          value: 'Tondiarpet Terminal',
+        },
+      ],
+    },
+    {
+      label: 'BSO',
+      value: 'BSO',
+      children: [
+        {
+          label: 'Patna Terminal',
+          value: 'Patna Terminal',
+        },
+      ],
+    },
   ];
+  const displayRender = (labels, selectedOptions = []) =>
+    labels.map((label, i) => {
+      const option = selectedOptions[i];
+      if (i === labels.length - 1) {
+        return <span key={option.value}>{label}</span>;
+      }
+      return <span key={option.value}>{label} / </span>;
+    });
+  const filter = (inputValue, path) =>
+    path.some(
+      (option) =>
+        option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1,
+    );
   const legends = () => {
     return (
       <div className="container1 bg-white legend-div w-100">
@@ -2213,14 +2264,16 @@ function App() {
     );
   };
   return (
-    <div className="App d-flex flex-column vh-100 vw-100">
+    <div className="App d-flex flex-column vw-100">
       <div className="IOCLImage" />
       <div className="title-bar">
         <div className={`title`}>
           <Typewriter
             options={{
               strings: selectedTerminal
-                ? `IOCL - ${selectedTerminal.toUpperCase()} - JRM`
+                ? `IOCL - ${selectedTerminal[
+                    selectedTerminal.length - 1
+                  ].toUpperCase()} - JRM`
                 : 'IOCL - JRM',
               pauseFor: 5000,
               autoStart: true,
@@ -2230,67 +2283,54 @@ function App() {
           />
         </div>
         <label className={`title-small`}>Customer Route Map</label>
-        <Autocomplete
-          disablePortal
-          options={locationList}
-          sx={{
+        <Cascader
+          options={stateOfficeList}
+          expandTrigger="hover"
+          displayRender={displayRender}
+          showSearch={{ filter }}
+          placeholder={'Select Terminal...'}
+          className="custom-cascader"
+          style={{
             width: isSmallScreen ? '90vw' : '40vw',
-            marginBottom: '10px',
-            '& + .MuiAutocomplete-popper .MuiAutocomplete-option': {
-              fontSize: isSmallScreen ? '3vw' : '1vw',
-            },
+            height: isSmallScreen ? 35 : 45,
+            marginBottom: 10,
           }}
-          name="jrm"
-          onChange={(e, newValue) => {
+          onChange={(newValue) => {
             setSelectedTerminal(newValue);
             setSelectedDest(null);
           }}
-          size="small"
-          value={selectedTerminal}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label={selectedTerminal === null ? 'Select Terminal...' : ''}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  fontSize: isSmallScreen ? '3vw' : '1vw',
-                  color: 'black',
-                  fontFamily: 'calibri',
-                  backgroundColor: 'white',
-                },
-                '& .MuiInputLabel-root': {
-                  fontSize: isSmallScreen ? '3vw' : '1vw',
-                  color: 'black',
-                  fontFamily: 'calibri',
-                  backgroundColor: 'white',
-                },
-              }}
-            />
-          )}
         />
         <Autocomplete
           disablePortal
           options={
-            selectedTerminal === 'All'
-              ? [
-                  ...coimbatoreList,
-                  ...maduraiList,
-                  ...trichyList,
-                  ...sankariList,
-                  ...asanurList,
-                ].map((item) => item.toUpperCase())
-              : selectedTerminal === 'Coimbatore Terminal'
-              ? coimbatoreList.map((item) => item.toUpperCase())
-              : selectedTerminal === 'Madurai Terminal'
-              ? maduraiList.map((item) => item.toUpperCase())
-              : selectedTerminal === 'Trichy Terminal'
-              ? trichyList.map((item) => item.toUpperCase())
-              : selectedTerminal === 'Sankari Terminal'
-              ? sankariList.map((item) => item.toUpperCase())
-              : selectedTerminal === 'Asanur Terminal'
-              ? asanurList.map((item) => item.toUpperCase())
-              : selectedTerminal === 'Tondiarpet Terminal'
-              ? tondiarpetList.map((item) => item.toUpperCase())
+            selectedTerminal
+              ? selectedTerminal[selectedTerminal.length - 1] === 'All'
+                ? [
+                    ...coimbatoreList,
+                    ...maduraiList,
+                    ...trichyList,
+                    ...sankariList,
+                    ...asanurList,
+                  ].map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Coimbatore Terminal'
+                ? coimbatoreList.map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Madurai Terminal'
+                ? maduraiList.map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Trichy Terminal'
+                ? trichyList.map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Sankari Terminal'
+                ? sankariList.map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Asanur Terminal'
+                ? asanurList.map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Tondiarpet Terminal'
+                ? tondiarpetList.map((item) => item.toUpperCase())
+                : []
               : []
           }
           sx={{

@@ -2013,6 +2013,79 @@ function App() {
     'zc8494-coco_indira_nagar.html',
   ];
 
+  const patnaList = [
+    'maps_kirti_priya_fuel_station.html',
+    'maps_pawapuri_kisan_seva_kendra.html',
+    'maps_pawapuri_services.html',
+    'maps_rani_fuel_station.html',
+    'maps_shailputri_kisan_seva_kendra.html',
+    'maps_shankar_kisan_seva_kendra.html',
+    'maps_shanti_mehta_kisan_seva_kendra.html',
+    'maps_singh_kisan_seva_kendra.html',
+    'maps_sri_lakshmi_kisan_seva_kendra.html',
+    'maps_terminal_filling_point.html',
+    'maps_usha_kisan_seva_kendra.html',
+    'map_ajit_service_station.html',
+    'map_ashok_automobile.html',
+    'map_baba_filling_station.html',
+    'map_baba_pashupatinath_filling_station.html',
+    'map_bhawani_service_station.html',
+    'map_bhawani_shankar_petroleum.html',
+    'map_budha_jain_auto_service.html',
+    'map_chishty_kisan_seva_kendra.html',
+    'map_dabaich_service_station.html',
+    'map_deo_auto_service.html',
+    'map_deva_kisan_seva_kendra.html',
+    'map_durga_filling_station.html',
+    'map_durga_petroleum_cafe.html',
+    'map_gulab_petroleum.html',
+    'map_hare_krishna_service_station.html',
+    'map_jai_mata_di_service_centre.html',
+    'map_jandaha_service_station.html',
+    'map_kameshwar_singh_ksk.html',
+    'map_kamla_service_centre.html',
+    'map_kaushal_fuel_service_station.html',
+    'map_krishan_murari_petroleum.html',
+    'map_lakshya_aditya_fuel_centre.html',
+    'map_lal_kisan_sewa_kendra.html',
+    'map_ma_janaki_transport_service.html',
+    'map_maa_sita_petroleum.html',
+    'map_mahua_service_station.html',
+    'map_manali_kisan_sewa_kendra.html',
+    'map_mata_vaishno_ksk.html',
+    'map_ms_om_sai_petroleum.html',
+    'map_saheed_rambachan_services.html',
+    'map_shaligram_kisan_seva_kendra.html',
+    'map_shekhar_kisan_sewa_kendra.html',
+    'map_sri_ajay_kr_&_sons_petroleum.html',
+    'map_suraj_service_station.html',
+    'map_swastik_services.html',
+    'map_tirupati_service_station.html',
+    'map_vaishali_auto_syndicate.html',
+    'map_vaishali_petroleum_service_sta.html',
+    'map_vijay_auto_traders.html',
+    'rtd_arnav_petroleum_ksk.html',
+    'rtd_bharti_petroleum.html',
+    'rtd_chandradeo_kisan_seva_kendra.html',
+    'rtd_daudi_super_fuel.html',
+    'rtd_gautam_petroleum.html',
+    'rtd_jai_baba_jagmohan_ksk.html',
+    'rtd_kanha_kisan_seva_kendra.html',
+    'rtd_kriti_fuel_ksk.html',
+    'rtd_maa_jagdamba_ksk.html',
+    'rtd_maa_petroleum.html',
+    'rtd_ms_ramendu_petroleum.html',
+    'rtd_narmada_petroleum.html',
+    'rtd_national_fuel_station.html',
+    'rtd_rama_fuel_ksk.html',
+    'rtd_ramdeo_pd_shahi_ksk.html',
+    'rtd_saksham_fuel_station.html',
+    'rtd_sheet_basant_fuels.html',
+    'rtd_shyam_super_fuel.html',
+    'rtd_super_kisan_sewa_kendra.html',
+    'rtd_tejas_fuel_station.html',
+  ];
+
   const [selectedDest, setSelectedDest] = useState(null);
   const [selectedTerminal, setSelectedTerminal] = useState(null);
   const isSmallScreen = useMediaQuery('(max-width:600px)');
@@ -2330,6 +2403,9 @@ function App() {
                 : selectedTerminal[selectedTerminal.length - 1] ===
                   'Tondiarpet Terminal'
                 ? tondiarpetList.map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                  'Patna Terminal'
+                ? patnaList.map((item) => item.toUpperCase())
                 : []
               : []
           }

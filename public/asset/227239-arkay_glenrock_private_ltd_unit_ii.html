@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7c3c46469af498fc929ba54c5044adca {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7c3c46469af498fc929ba54c5044adca" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7c3c46469af498fc929ba54c5044adca = L.map(
+                "map_7c3c46469af498fc929ba54c5044adca",
+                {
+                    center: [10.049205, 77.9514],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c9ec8e157cba82e45940ec45fef869c4 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google Satellite", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c9ec8e157cba82e45940ec45fef869c4.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var tile_layer_e40dae3d5660785a8074fccf27015034 = L.tileLayer(
+                "https://{s}.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Map data \u00a9 Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": ["mt0", "mt1", "mt2", "mt3"], "tms": false}
+            );
+        
+    
+            tile_layer_e40dae3d5660785a8074fccf27015034.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var tile_layer_dbd7cad5765c8f6f32f25a53ed8beded = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_dbd7cad5765c8f6f32f25a53ed8beded.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var feature_group_41282a6fe95c801e373f51a45a8cd456 = L.featureGroup(
+                {}
+            );
+        
+    
+            var poly_line_a024faad612360154a1983f6fc0f408a = L.polyline(
+                [[9.84957, 78.0293], [9.85017, 78.03016], [9.85037, 78.03083], [9.85039, 78.03151], [9.85043, 78.03178], [9.85094, 78.03309], [9.85157, 78.03466], [9.85131, 78.03474], [9.85125, 78.03458], [9.85131, 78.03474], [9.85157, 78.03466], [9.85109, 78.03347], [9.85094, 78.03309], [9.85043, 78.03178], [9.85032, 78.03144], [9.85029, 78.03083], [9.85013, 78.03028], [9.84999, 78.03001], [9.8494, 78.02916], [9.84892, 78.02835], [9.84834, 78.0273], [9.84822, 78.02562], [9.84853, 78.02391], [9.84876, 78.02248], [9.84877, 78.02215], [9.84823, 78.02137], [9.84738, 78.02125], [9.84688, 78.02117], [9.84679, 78.02108], [9.84668, 78.02098], [9.84543, 78.0204], [9.84591, 78.01979], [9.84675, 78.01825], [9.84801, 78.01593], [9.84844, 78.01527], [9.84855, 78.01523], [9.84973, 78.01561], [9.85184, 78.01621], [9.85404, 78.01689], [9.85666, 78.01788], [9.85842, 78.01873], [9.86273, 78.02114], [9.86757, 78.02403], [9.8691, 78.02491], [9.86959, 78.02508], [9.87124, 78.02569], [9.87228, 78.02628], [9.87353, 78.02721], [9.87653, 78.02945], [9.87711, 78.02973], [9.87765, 78.02989], [9.87846, 78.02995], [9.87916, 78.02984], [9.88129, 78.02931], [9.88255, 78.02916], [9.88357, 78.02927], [9.88436, 78.02954], [9.88489, 78.02982], [9.88544, 78.03021], [9.88667, 78.03123], [9.88882, 78.03308], [9.89241, 78.03604], [9.89376, 78.03731], [9.89515, 78.03894], [9.89726, 78.04183], [9.89803, 78.04275], [9.89882, 78.04353], [9.90039, 78.04473], [9.90187, 78.04556], [9.90283, 78.04596], [9.90491, 78.0468], [9.90639, 78.04735], [9.91092, 78.049], [9.91788, 78.05155], [9.92525, 78.05425], [9.93233, 78.05684], [9.9325, 78.0569], [9.93365, 78.05732], [9.93467, 78.05763], [9.93624, 78.05827], [9.93756, 78.05865], [9.93839, 78.05882], [9.93955, 78.05899], [9.94041, 78.05906], [9.94235, 78.05897], [9.94405, 78.05878], [9.94571, 78.05835], [9.94657, 78.05806], [9.94726, 78.05773], [9.94898, 78.05683], [9.95048, 78.05581], [9.95185, 78.05462], [9.95354, 78.05274], [9.95717, 78.04851], [9.96333, 78.04135], [9.96465, 78.03984], [9.96543, 78.03894], [9.96718, 78.03692], [9.96796, 78.03601], [9.96868, 78.03528], [9.96943, 78.0346], [9.97028, 78.03397], [9.97202, 78.03294], [9.97317, 78.03238], [9.97479, 78.03182], [9.97575, 78.03159], [9.98121, 78.03061], [9.98213, 78.03043], [9.98292, 78.03021], [9.98348, 78.02991], [9.9841, 78.02945], [9.9849, 78.02888], [9.98581, 78.02816], [9.98671, 78.02765], [9.98832, 78.02691], [9.99049, 78.0258], [9.99138, 78.02544], [9.99206, 78.02528], [9.99283, 78.0252], [9.99437, 78.02516], [9.99701, 78.02517], [9.99766, 78.02508], [9.99823, 78.02489], [9.99872, 78.02464], [9.99948, 78.024], [10.00079, 78.0229], [10.00434, 78.02079], [10.00696, 78.01928], [10.0085, 78.01876], [10.01103, 78.01808], [10.01305, 78.01752], [10.01455, 78.017], [10.01645, 78.01624], [10.01709, 78.01604], [10.01791, 78.01585], [10.01836, 78.01582], [10.01925, 78.01587], [10.02042, 78.01599], [10.02119, 78.01598], [10.02375, 78.01547], [10.02533, 78.01518], [10.02735, 78.0149], [10.02928, 78.01466], [10.0312, 78.01414], [10.03303, 78.01367], [10.03427, 78.01347], [10.03479, 78.0134], [10.03624, 78.01312], [10.03841, 78.01256], [10.0389, 78.01228], [10.04006, 78.01171], [10.04165, 78.01069], [10.04195, 78.01044], [10.04208, 78.01027], [10.04264, 78.00962], [10.04318, 78.00897], [10.04374, 78.00813], [10.04548, 78.00541], [10.04632, 78.00425], [10.04674, 78.00356], [10.049, 77.99822], [10.04951, 77.99739], [10.0502, 77.99676], [10.05164, 77.99579], [10.05247, 77.99499], [10.05307, 77.99401], [10.05351, 77.9931], [10.05384, 77.99252], [10.05454, 77.99153], [10.05617, 77.98945], [10.05816, 77.98708], [10.0596, 77.98548], [10.06119, 77.98351], [10.06306, 77.98118], [10.06408, 77.97994], [10.06476, 77.97936], [10.06539, 77.97905], [10.06612, 77.97883], [10.06767, 77.97842], [10.06919, 77.97802], [10.0709, 77.9777], [10.07289, 77.97755], [10.07437, 77.97756], [10.0764, 77.97741], [10.07711, 77.97737], [10.07878, 77.97737], [10.08117, 77.9775], [10.086, 77.9776], [10.08747, 77.97738], [10.08873, 77.97691], [10.08962, 77.97638], [10.09073, 77.97544], [10.09145, 77.97459], [10.09202, 77.97363], [10.09303, 77.97183], [10.09585, 77.96675], [10.09972, 77.95972], [10.10043, 77.95837], [10.10055, 77.95805], [10.10082, 77.95731], [10.10202, 77.95205], [10.10295, 77.94777], [10.10348, 77.94622], [10.10409, 77.94503], [10.10492, 77.94366], [10.1056, 77.94268], [10.10785, 77.94024], [10.1086, 77.93964], [10.10982, 77.93888], [10.11153, 77.93784], [10.1164, 77.93472], [10.11951, 77.93267], [10.12256, 77.93068], [10.12769, 77.92733], [10.13039, 77.9257], [10.13408, 77.92374], [10.13624, 77.92265], [10.13695, 77.92241], [10.13784, 77.92223], [10.13955, 77.92202], [10.14185, 77.92173], [10.14298, 77.92144], [10.14387, 77.92098], [10.14581, 77.91981], [10.14649, 77.91948], [10.14766, 77.91901], [10.1488, 77.91862], [10.15043, 77.91828], [10.15197, 77.91793], [10.1528, 77.91763], [10.15508, 77.91677], [10.15604, 77.91668], [10.15736, 77.91683], [10.15873, 77.91681], [10.16048, 77.9166], [10.16108, 77.91659], [10.16187, 77.91668], [10.16288, 77.91701], [10.16446, 77.91766], [10.16561, 77.91809], [10.16639, 77.91821], [10.16732, 77.91812], [10.16814, 77.91783], [10.17339, 77.9149], [10.17438, 77.91436], [10.1756, 77.91385], [10.17707, 77.9134], [10.18082, 77.91232], [10.18222, 77.91192], [10.18302, 77.91172], [10.18446, 77.91133], [10.1883, 77.91024], [10.18921, 77.91011], [10.19004, 77.91007], [10.19148, 77.91], [10.19267, 77.90973], [10.19507, 77.90908], [10.19648, 77.9088], [10.20595, 77.90819], [10.20736, 77.90809], [10.20798, 77.90795], [10.21113, 77.90703], [10.21218, 77.9068], [10.2127, 77.90676], [10.21502, 77.90696], [10.21713, 77.90708], [10.21908, 77.90698], [10.22121, 77.90687], [10.22436, 77.90641], [10.22576, 77.90619], [10.22663, 77.90619], [10.22741, 77.90634], [10.22999, 77.9071], [10.23153, 77.90757], [10.23175, 77.90763], [10.23182, 77.9075], [10.23212, 77.90715], [10.2329, 77.90618], [10.23342, 77.90526], [10.23385, 77.90442], [10.23419, 77.90357], [10.23449, 77.90235], [10.2346, 77.90127], [10.23462, 77.9002], [10.23448, 77.89874], [10.23433, 77.89811], [10.23401, 77.89729], [10.2335, 77.89618], [10.23329, 77.89531], [10.23319, 77.8945], [10.23318, 77.89385], [10.23331, 77.89287], [10.23372, 77.89186], [10.23415, 77.89126], [10.23458, 77.89088], [10.23558, 77.88996], [10.23624, 77.88923], [10.2385, 77.88644], [10.2396, 77.88526], [10.2404, 77.88455], [10.24129, 77.88386], [10.24198, 77.88342], [10.24264, 77.88313], [10.2433, 77.88295], [10.24485, 77.88247], [10.24561, 77.88216], [10.2465, 77.88174], [10.24708, 77.88154], [10.2481, 77.8812], [10.24882, 77.88091], [10.24955, 77.88045], [10.25045, 77.87982], [10.25154, 77.8792], [10.25221, 77.87889], [10.25284, 77.87869], [10.25452, 77.87823], [10.2554, 77.87806], [10.25661, 77.87788], [10.25788, 77.87778], [10.25615, 77.87701], [10.25487, 77.87651], [10.25258, 77.87569], [10.25066, 77.8748], [10.24921, 77.87426], [10.24856, 77.87405]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(feature_group_41282a6fe95c801e373f51a45a8cd456);
+        
+    
+            feature_group_41282a6fe95c801e373f51a45a8cd456.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var feature_group_59e85aec4b7611096f2c94a31fc6e24d = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_55ceefd3208319a2c9770cdbb1f607bf = L.marker(
+                [9.84971, 78.0292],
+                {}
+            ).addTo(feature_group_59e85aec4b7611096f2c94a31fc6e24d);
+        
+    
+            var icon_03ef8b4613bf93fd662380985420514e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "play", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_55ceefd3208319a2c9770cdbb1f607bf.setIcon(icon_03ef8b4613bf93fd662380985420514e);
+        
+    
+        var popup_b682980b236ca2bce4e1ada4a445c048 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f68025274d535282935ad859183ffd25 = $(`<div id="html_f68025274d535282935ad859183ffd25" style="width: 100.0%; height: 100.0%;">Start Point<br>Latitude: 9.84971<br>Longitude: 78.0292</div>`)[0];
+                popup_b682980b236ca2bce4e1ada4a445c048.setContent(html_f68025274d535282935ad859183ffd25);
+            
+        
+
+        marker_55ceefd3208319a2c9770cdbb1f607bf.bindPopup(popup_b682980b236ca2bce4e1ada4a445c048)
+        ;
+
+        
+    
+    
+            var marker_d4be4a2ba2141206de81cb032695447d = L.marker(
+                [10.2487, 77.8736],
+                {}
+            ).addTo(feature_group_59e85aec4b7611096f2c94a31fc6e24d);
+        
+    
+            var icon_0a64a9624b6ab3f9828ef4d136459740 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "stop", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d4be4a2ba2141206de81cb032695447d.setIcon(icon_0a64a9624b6ab3f9828ef4d136459740);
+        
+    
+        var popup_7509635884c8d498b0e3bd400f7cef2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_12b7235d8e9d934776f693af3050e9d0 = $(`<div id="html_12b7235d8e9d934776f693af3050e9d0" style="width: 100.0%; height: 100.0%;">End Point<br>Latitude: 10.2487<br>Longitude: 77.8736</div>`)[0];
+                popup_7509635884c8d498b0e3bd400f7cef2f.setContent(html_12b7235d8e9d934776f693af3050e9d0);
+            
+        
+
+        marker_d4be4a2ba2141206de81cb032695447d.bindPopup(popup_7509635884c8d498b0e3bd400f7cef2f)
+        ;
+
+        
+    
+    
+            feature_group_59e85aec4b7611096f2c94a31fc6e24d.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var feature_group_323d5f6ba2b672f99c25de211bbd872f = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_2adf8e3a9a039337101f2e9219ef93f9 = L.marker(
+                [9.85157, 78.03466],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_7176e3c7d32e2c480b0c163298b4e60d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2adf8e3a9a039337101f2e9219ef93f9.setIcon(icon_7176e3c7d32e2c480b0c163298b4e60d);
+        
+    
+        var popup_cf1c7c0fbcb9acb69e0fd130410b3afa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8c0ab083d3eb915dd95bd253002a571b = $(`<div id="html_8c0ab083d3eb915dd95bd253002a571b" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.85157, 78.03466                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_cf1c7c0fbcb9acb69e0fd130410b3afa.setContent(html_8c0ab083d3eb915dd95bd253002a571b);
+            
+        
+
+        marker_2adf8e3a9a039337101f2e9219ef93f9.bindPopup(popup_cf1c7c0fbcb9acb69e0fd130410b3afa)
+        ;
+
+        
+    
+    
+            var marker_4d371e9220f591a322b6643e50aadb73 = L.marker(
+                [9.85131, 78.03474],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_a42efbb5f7f6274fe98b1f0d7363b499 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4d371e9220f591a322b6643e50aadb73.setIcon(icon_a42efbb5f7f6274fe98b1f0d7363b499);
+        
+    
+        var popup_577abeda9ff0e461af57bd7b25299e99 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aa604292d6faa3423d1d6f5a68132bbf = $(`<div id="html_aa604292d6faa3423d1d6f5a68132bbf" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.85131, 78.03474                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_577abeda9ff0e461af57bd7b25299e99.setContent(html_aa604292d6faa3423d1d6f5a68132bbf);
+            
+        
+
+        marker_4d371e9220f591a322b6643e50aadb73.bindPopup(popup_577abeda9ff0e461af57bd7b25299e99)
+        ;
+
+        
+    
+    
+            var marker_8699c0230f8732dd1140510eff8ea41c = L.marker(
+                [9.85125, 78.03458],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_5be65ffcbc827f9a1875eb4934ea2264 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8699c0230f8732dd1140510eff8ea41c.setIcon(icon_5be65ffcbc827f9a1875eb4934ea2264);
+        
+    
+        var popup_6b3b3ad1e39e8949193d1fd2f1bcf159 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1b8fffbe6058707f39e3c51dda378808 = $(`<div id="html_1b8fffbe6058707f39e3c51dda378808" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.85125, 78.03458                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_6b3b3ad1e39e8949193d1fd2f1bcf159.setContent(html_1b8fffbe6058707f39e3c51dda378808);
+            
+        
+
+        marker_8699c0230f8732dd1140510eff8ea41c.bindPopup(popup_6b3b3ad1e39e8949193d1fd2f1bcf159)
+        ;
+
+        
+    
+    
+            var marker_a6600c5c1d378bae38b20b7af86b4c2c = L.marker(
+                [9.85131, 78.03474],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_188d844e0d51a514b40ea7fa8fdbcbcb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a6600c5c1d378bae38b20b7af86b4c2c.setIcon(icon_188d844e0d51a514b40ea7fa8fdbcbcb);
+        
+    
+        var popup_f695c8c568f94cba2c9a055c70fab913 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1d0a0cd3649adf6f3aa621af2f987c68 = $(`<div id="html_1d0a0cd3649adf6f3aa621af2f987c68" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.85131, 78.03474                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_f695c8c568f94cba2c9a055c70fab913.setContent(html_1d0a0cd3649adf6f3aa621af2f987c68);
+            
+        
+
+        marker_a6600c5c1d378bae38b20b7af86b4c2c.bindPopup(popup_f695c8c568f94cba2c9a055c70fab913)
+        ;
+
+        
+    
+    
+            var marker_6febab543fd28fff21fdb525933a98c9 = L.marker(
+                [9.85157, 78.03466],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_ab1d45bd70e9ec4252773d99c3f6f9c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6febab543fd28fff21fdb525933a98c9.setIcon(icon_ab1d45bd70e9ec4252773d99c3f6f9c1);
+        
+    
+        var popup_ef4435e1ad4d50eb39732b0d60cf1f0e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e33fda153cb55872ed1fe940f738e5ea = $(`<div id="html_e33fda153cb55872ed1fe940f738e5ea" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.85157, 78.03466                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_ef4435e1ad4d50eb39732b0d60cf1f0e.setContent(html_e33fda153cb55872ed1fe940f738e5ea);
+            
+        
+
+        marker_6febab543fd28fff21fdb525933a98c9.bindPopup(popup_ef4435e1ad4d50eb39732b0d60cf1f0e)
+        ;
+
+        
+    
+    
+            var marker_1a83367d58a23b4f7ab78a80b8ec8f2e = L.marker(
+                [9.84877, 78.02215],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_1fc64b68a1c68fd6de03ea0d16eb44f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_1a83367d58a23b4f7ab78a80b8ec8f2e.setIcon(icon_1fc64b68a1c68fd6de03ea0d16eb44f8);
+        
+    
+        var popup_afc8d2ded8cf0d5099997ddbdd1aa369 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1fb8d71e5f68e49bce043d32a00fa150 = $(`<div id="html_1fb8d71e5f68e49bce043d32a00fa150" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> Medium                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.84877, 78.02215                         <br><b>Recommended Speed:</b> 25-30 KMS/Hr                     </div>                 </div>`)[0];
+                popup_afc8d2ded8cf0d5099997ddbdd1aa369.setContent(html_1fb8d71e5f68e49bce043d32a00fa150);
+            
+        
+
+        marker_1a83367d58a23b4f7ab78a80b8ec8f2e.bindPopup(popup_afc8d2ded8cf0d5099997ddbdd1aa369)
+        ;
+
+        
+    
+    
+            var marker_d948fea9682ee777e8040446417e8c9b = L.marker(
+                [9.84823, 78.02137],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_55800588638b8585a88da439115ec487 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d948fea9682ee777e8040446417e8c9b.setIcon(icon_55800588638b8585a88da439115ec487);
+        
+    
+        var popup_cfbc6eae16f9be40cf038df3bb533e98 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83e9b7c858dfd8c6bc642bac82cb88a0 = $(`<div id="html_83e9b7c858dfd8c6bc642bac82cb88a0" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.84823, 78.02137                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_cfbc6eae16f9be40cf038df3bb533e98.setContent(html_83e9b7c858dfd8c6bc642bac82cb88a0);
+            
+        
+
+        marker_d948fea9682ee777e8040446417e8c9b.bindPopup(popup_cfbc6eae16f9be40cf038df3bb533e98)
+        ;
+
+        
+    
+    
+            var marker_cf028a6ddc5d5ff0c049cd197a2adfbe = L.marker(
+                [9.84688, 78.02117],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_c01dfd612c005fae5645c662fd67aee9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_cf028a6ddc5d5ff0c049cd197a2adfbe.setIcon(icon_c01dfd612c005fae5645c662fd67aee9);
+        
+    
+        var popup_2618579f977756a9115c660b776c4a8c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ede88e690e967eaa0109eb2bd80bd509 = $(`<div id="html_ede88e690e967eaa0109eb2bd80bd509" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> Medium                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.84688, 78.02117                         <br><b>Recommended Speed:</b> 25-30 KMS/Hr                     </div>                 </div>`)[0];
+                popup_2618579f977756a9115c660b776c4a8c.setContent(html_ede88e690e967eaa0109eb2bd80bd509);
+            
+        
+
+        marker_cf028a6ddc5d5ff0c049cd197a2adfbe.bindPopup(popup_2618579f977756a9115c660b776c4a8c)
+        ;
+
+        
+    
+    
+            var marker_72e79c8905de8456098008901aec6e7a = L.marker(
+                [9.84543, 78.0204],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_b82f5e177036abe4399bfcef03e06bb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_72e79c8905de8456098008901aec6e7a.setIcon(icon_b82f5e177036abe4399bfcef03e06bb8);
+        
+    
+        var popup_db088505aa2b326410e8459ef0ad11e6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_058f6c2b210c4a3e61979578f4a20bb5 = $(`<div id="html_058f6c2b210c4a3e61979578f4a20bb5" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.84543, 78.0204                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_db088505aa2b326410e8459ef0ad11e6.setContent(html_058f6c2b210c4a3e61979578f4a20bb5);
+            
+        
+
+        marker_72e79c8905de8456098008901aec6e7a.bindPopup(popup_db088505aa2b326410e8459ef0ad11e6)
+        ;
+
+        
+    
+    
+            var marker_3f45399f19c1e82f2a1a87cf44ede54b = L.marker(
+                [9.84844, 78.01527],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_932538b0a93d52f3ded37220634be9fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3f45399f19c1e82f2a1a87cf44ede54b.setIcon(icon_932538b0a93d52f3ded37220634be9fe);
+        
+    
+        var popup_e2a36e592841a27d10422b65f1e4e667 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c62d19cf4b4a56c50527c9cc8a94e84d = $(`<div id="html_c62d19cf4b4a56c50527c9cc8a94e84d" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> Medium                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.84844, 78.01527                         <br><b>Recommended Speed:</b> 25-30 KMS/Hr                     </div>                 </div>`)[0];
+                popup_e2a36e592841a27d10422b65f1e4e667.setContent(html_c62d19cf4b4a56c50527c9cc8a94e84d);
+            
+        
+
+        marker_3f45399f19c1e82f2a1a87cf44ede54b.bindPopup(popup_e2a36e592841a27d10422b65f1e4e667)
+        ;
+
+        
+    
+    
+            var marker_479ebcfc249dfced0a47c0479844dba1 = L.marker(
+                [9.84855, 78.01523],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_a3b807392c89d4f69ab4f172e41c1b80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_479ebcfc249dfced0a47c0479844dba1.setIcon(icon_a3b807392c89d4f69ab4f172e41c1b80);
+        
+    
+        var popup_596fe11505dda65ecd5dd01e613826f2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1048bbc73d068075a92bb33f6370ad5b = $(`<div id="html_1048bbc73d068075a92bb33f6370ad5b" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> Medium                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 9.84855, 78.01523                         <br><b>Recommended Speed:</b> 25-30 KMS/Hr                     </div>                 </div>`)[0];
+                popup_596fe11505dda65ecd5dd01e613826f2.setContent(html_1048bbc73d068075a92bb33f6370ad5b);
+            
+        
+
+        marker_479ebcfc249dfced0a47c0479844dba1.bindPopup(popup_596fe11505dda65ecd5dd01e613826f2)
+        ;
+
+        
+    
+    
+            var marker_ad96a2b76a358bf9bfe451a8be988b23 = L.marker(
+                [10.23175, 77.90763],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_eb079bd84956503cb3d37c2283256ec6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ad96a2b76a358bf9bfe451a8be988b23.setIcon(icon_eb079bd84956503cb3d37c2283256ec6);
+        
+    
+        var popup_6b57a345e66b32efeb6441ff571a9b3a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e0623c87c2dadbd00f198bfe20cdc5ba = $(`<div id="html_e0623c87c2dadbd00f198bfe20cdc5ba" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 10.23175, 77.90763                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_6b57a345e66b32efeb6441ff571a9b3a.setContent(html_e0623c87c2dadbd00f198bfe20cdc5ba);
+            
+        
+
+        marker_ad96a2b76a358bf9bfe451a8be988b23.bindPopup(popup_6b57a345e66b32efeb6441ff571a9b3a)
+        ;
+
+        
+    
+    
+            var marker_a2b1a46725c7a3bf8b60c822344f9398 = L.marker(
+                [10.25788, 77.87778],
+                {}
+            ).addTo(feature_group_323d5f6ba2b672f99c25de211bbd872f);
+        
+    
+            var icon_636975bb78811e6de4ed077da531a44a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a2b1a46725c7a3bf8b60c822344f9398.setIcon(icon_636975bb78811e6de4ed077da531a44a);
+        
+    
+        var popup_39967f0dabee2223d08567fdb363b481 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_202390c09d9eb76e9bebcd74eee5d3f0 = $(`<div id="html_202390c09d9eb76e9bebcd74eee5d3f0" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Risk Level:</b> High                         <br><b>Risk Type:</b> Sharp turn                         <br><b>Coordinates:</b> 10.25788, 77.87778                         <br><b>Recommended Speed:</b> 10-15 KMS/Hr                     </div>                 </div>`)[0];
+                popup_39967f0dabee2223d08567fdb363b481.setContent(html_202390c09d9eb76e9bebcd74eee5d3f0);
+            
+        
+
+        marker_a2b1a46725c7a3bf8b60c822344f9398.bindPopup(popup_39967f0dabee2223d08567fdb363b481)
+        ;
+
+        
+    
+    
+            feature_group_323d5f6ba2b672f99c25de211bbd872f.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var feature_group_4f27f0bfa9a1013a02c460f12cda915b = L.featureGroup(
+                {}
+            );
+        
+    
+            feature_group_4f27f0bfa9a1013a02c460f12cda915b.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var feature_group_1ce0ad611662008f30d027df53d9cc21 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_e7ba1f1276d8086510e25ade8703e270 = L.marker(
+                [9.8739947, 78.0268792],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_07127664d40bbd4e52807770f50ffdee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e7ba1f1276d8086510e25ade8703e270.setIcon(icon_07127664d40bbd4e52807770f50ffdee);
+        
+    
+        var popup_515bfb380dc3afc37f2fa605581fac09 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_60a75e92053da9519e95e9f38c2c5c32 = $(`<div id="html_60a75e92053da9519e95e9f38c2c5c32" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> Fuel                         <br><b>Name:</b> Indian Oil                         <br><b>Coordinates:</b> 9.8739947, 78.0268792                     </div>                 </div>`)[0];
+                popup_515bfb380dc3afc37f2fa605581fac09.setContent(html_60a75e92053da9519e95e9f38c2c5c32);
+            
+        
+
+        marker_e7ba1f1276d8086510e25ade8703e270.bindPopup(popup_515bfb380dc3afc37f2fa605581fac09)
+        ;
+
+        
+    
+    
+            var marker_0cfa04be693248b733d1e764b9415e37 = L.marker(
+                [9.9026379, 78.0395872],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_a3591bf8defd616678d1c2e5cf761e4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_0cfa04be693248b733d1e764b9415e37.setIcon(icon_a3591bf8defd616678d1c2e5cf761e4c);
+        
+    
+        var popup_114afb6b215540edbe83ee65e2cdef67 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d6c37ebf6554dd30875816d720ceb4f1 = $(`<div id="html_d6c37ebf6554dd30875816d720ceb4f1" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> College                         <br><b>Name:</b> Anna Palkalaikazhagam Mandala Valagam, Madurai                         <br><b>Coordinates:</b> 9.9026379, 78.0395872                     </div>                 </div>`)[0];
+                popup_114afb6b215540edbe83ee65e2cdef67.setContent(html_d6c37ebf6554dd30875816d720ceb4f1);
+            
+        
+
+        marker_0cfa04be693248b733d1e764b9415e37.bindPopup(popup_114afb6b215540edbe83ee65e2cdef67)
+        ;
+
+        
+    
+    
+            var marker_1499ca78119fc9518d6069919c0be800 = L.marker(
+                [9.9020138, 78.039874],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_5b52da6f8d312e6d855471a309fc25d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_1499ca78119fc9518d6069919c0be800.setIcon(icon_5b52da6f8d312e6d855471a309fc25d6);
+        
+    
+        var popup_77638ce969fa958cc86c6cfee19bca16 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_18e7920a72b772141d3fdd20c7abf53b = $(`<div id="html_18e7920a72b772141d3fdd20c7abf53b" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> College                         <br><b>Name:</b> Anna Palkalaikazhagam Mandala Valagam, Madurai                         <br><b>Coordinates:</b> 9.9020138, 78.039874                     </div>                 </div>`)[0];
+                popup_77638ce969fa958cc86c6cfee19bca16.setContent(html_18e7920a72b772141d3fdd20c7abf53b);
+            
+        
+
+        marker_1499ca78119fc9518d6069919c0be800.bindPopup(popup_77638ce969fa958cc86c6cfee19bca16)
+        ;
+
+        
+    
+    
+            var marker_863456b0a9e548d36bb05d1536b7ea75 = L.marker(
+                [10.0035459, 78.0207946],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_f0236e71357dce92c3071a2dec6feb99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_863456b0a9e548d36bb05d1536b7ea75.setIcon(icon_f0236e71357dce92c3071a2dec6feb99);
+        
+    
+        var popup_ddcb7c880c504ce58e340d373fc69eb6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6c5ea1ef5c5fa984bfe35e7ea5c0dbe7 = $(`<div id="html_6c5ea1ef5c5fa984bfe35e7ea5c0dbe7" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> Fuel                         <br><b>Name:</b> HP                         <br><b>Coordinates:</b> 10.0035459, 78.0207946                     </div>                 </div>`)[0];
+                popup_ddcb7c880c504ce58e340d373fc69eb6.setContent(html_6c5ea1ef5c5fa984bfe35e7ea5c0dbe7);
+            
+        
+
+        marker_863456b0a9e548d36bb05d1536b7ea75.bindPopup(popup_ddcb7c880c504ce58e340d373fc69eb6)
+        ;
+
+        
+    
+    
+            var marker_ed370acc887f360d299e4c2af534f62a = L.marker(
+                [10.0474816, 78.0007788],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_ac8df903264539dae189075ac3768407 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ed370acc887f360d299e4c2af534f62a.setIcon(icon_ac8df903264539dae189075ac3768407);
+        
+    
+        var popup_4512945e4eabfb756c89b6ba9bb9c7d6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_16a26f3c7e9398df306bde08ba266f9a = $(`<div id="html_16a26f3c7e9398df306bde08ba266f9a" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> Fuel                         <br><b>Name:</b> Indian Oil                         <br><b>Coordinates:</b> 10.0474816, 78.0007788                     </div>                 </div>`)[0];
+                popup_4512945e4eabfb756c89b6ba9bb9c7d6.setContent(html_16a26f3c7e9398df306bde08ba266f9a);
+            
+        
+
+        marker_ed370acc887f360d299e4c2af534f62a.bindPopup(popup_4512945e4eabfb756c89b6ba9bb9c7d6)
+        ;
+
+        
+    
+    
+            var marker_d7130631ece6c38d4009759b0f751d14 = L.marker(
+                [10.0586684, 77.9858037],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_5bdd7f10b8d7e4a5ed69bd75b12b38ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d7130631ece6c38d4009759b0f751d14.setIcon(icon_5bdd7f10b8d7e4a5ed69bd75b12b38ab);
+        
+    
+        var popup_9d835d1022add26dc75b79f53b2319c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0c7919e99a524557f454338b6a0c28f6 = $(`<div id="html_0c7919e99a524557f454338b6a0c28f6" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> Fuel                         <br><b>Name:</b> Bharat Petroleum                         <br><b>Coordinates:</b> 10.0586684, 77.9858037                     </div>                 </div>`)[0];
+                popup_9d835d1022add26dc75b79f53b2319c8.setContent(html_0c7919e99a524557f454338b6a0c28f6);
+            
+        
+
+        marker_d7130631ece6c38d4009759b0f751d14.bindPopup(popup_9d835d1022add26dc75b79f53b2319c8)
+        ;
+
+        
+    
+    
+            var marker_db5e8ad8868ffa64af7ad66f48be3f2c = L.marker(
+                [10.0706108, 77.9769219],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_a18b97d04b533ef307dd1d2277ef194a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_db5e8ad8868ffa64af7ad66f48be3f2c.setIcon(icon_a18b97d04b533ef307dd1d2277ef194a);
+        
+    
+        var popup_276418f01d36ead969981b871c46a4e3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc2c05f4d685f15064ed73e87cb23f49 = $(`<div id="html_bc2c05f4d685f15064ed73e87cb23f49" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> Hospital                         <br><b>Name:</b> Government Hospital, Katchakatti                         <br><b>Coordinates:</b> 10.0706108, 77.9769219                     </div>                 </div>`)[0];
+                popup_276418f01d36ead969981b871c46a4e3.setContent(html_bc2c05f4d685f15064ed73e87cb23f49);
+            
+        
+
+        marker_db5e8ad8868ffa64af7ad66f48be3f2c.bindPopup(popup_276418f01d36ead969981b871c46a4e3)
+        ;
+
+        
+    
+    
+            var marker_17dd47753933ff72d4edb9d5a21b66d6 = L.marker(
+                [10.0951543, 77.9665857],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_ae447675ea516f241ba7556857a0bb08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_17dd47753933ff72d4edb9d5a21b66d6.setIcon(icon_ae447675ea516f241ba7556857a0bb08);
+        
+    
+        var popup_50fb5ae38106d56a26c208fd3594f9cd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1eba3691bb9c9268220f48145f1619d6 = $(`<div id="html_1eba3691bb9c9268220f48145f1619d6" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> College                         <br><b>Name:</b> Madurai School of Management                         <br><b>Coordinates:</b> 10.0951543, 77.9665857                     </div>                 </div>`)[0];
+                popup_50fb5ae38106d56a26c208fd3594f9cd.setContent(html_1eba3691bb9c9268220f48145f1619d6);
+            
+        
+
+        marker_17dd47753933ff72d4edb9d5a21b66d6.bindPopup(popup_50fb5ae38106d56a26c208fd3594f9cd)
+        ;
+
+        
+    
+    
+            var marker_5ae622a183992d42a1a0048ea4953a2f = L.marker(
+                [10.0991938, 77.9599738],
+                {}
+            ).addTo(feature_group_1ce0ad611662008f30d027df53d9cc21);
+        
+    
+            var icon_dadea563775d972544e5143423e04f16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "gas-pump", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5ae622a183992d42a1a0048ea4953a2f.setIcon(icon_dadea563775d972544e5143423e04f16);
+        
+    
+        var popup_3ad8a71da1aca4ad9c16981aebf19494 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dbfdd5a7d57c3a989de55a823d654ad1 = $(`<div id="html_dbfdd5a7d57c3a989de55a823d654ad1" style="width: 100.0%; height: 100.0%;">                     <div style="text-align:center;">                         <b>Type:</b> Fuel                         <br><b>Name:</b> Indian Oil                         <br><b>Coordinates:</b> 10.0991938, 77.9599738                     </div>                 </div>`)[0];
+                popup_3ad8a71da1aca4ad9c16981aebf19494.setContent(html_dbfdd5a7d57c3a989de55a823d654ad1);
+            
+        
+
+        marker_5ae622a183992d42a1a0048ea4953a2f.bindPopup(popup_3ad8a71da1aca4ad9c16981aebf19494)
+        ;
+
+        
+    
+    
+            feature_group_1ce0ad611662008f30d027df53d9cc21.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            var layer_control_5b88b24905a36f0301882127fec28d58_layers = {
+                base_layers : {
+                    "Google Satellite" : tile_layer_c9ec8e157cba82e45940ec45fef869c4,
+                    "Google Terrain" : tile_layer_e40dae3d5660785a8074fccf27015034,
+                    "OpenStreetMap" : tile_layer_dbd7cad5765c8f6f32f25a53ed8beded,
+                },
+                overlays :  {
+                    "Route" : feature_group_41282a6fe95c801e373f51a45a8cd456,
+                    "Start/End Points" : feature_group_59e85aec4b7611096f2c94a31fc6e24d,
+                    "Risk Turns" : feature_group_323d5f6ba2b672f99c25de211bbd872f,
+                    "Elevation Risks" : feature_group_4f27f0bfa9a1013a02c460f12cda915b,
+                    "Key Locations" : feature_group_1ce0ad611662008f30d027df53d9cc21,
+                },
+            };
+            let layer_control_5b88b24905a36f0301882127fec28d58 = L.control.layers(
+                layer_control_5b88b24905a36f0301882127fec28d58_layers.base_layers,
+                layer_control_5b88b24905a36f0301882127fec28d58_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_7c3c46469af498fc929ba54c5044adca);
+
+        
+    
+            tile_layer_c9ec8e157cba82e45940ec45fef869c4.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            tile_layer_e40dae3d5660785a8074fccf27015034.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            tile_layer_dbd7cad5765c8f6f32f25a53ed8beded.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            feature_group_41282a6fe95c801e373f51a45a8cd456.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            feature_group_59e85aec4b7611096f2c94a31fc6e24d.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            feature_group_323d5f6ba2b672f99c25de211bbd872f.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            feature_group_4f27f0bfa9a1013a02c460f12cda915b.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+    
+            feature_group_1ce0ad611662008f30d027df53d9cc21.addTo(map_7c3c46469af498fc929ba54c5044adca);
+        
+</script>
+</html>

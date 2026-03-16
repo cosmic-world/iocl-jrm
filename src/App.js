@@ -2682,168 +2682,219 @@ function App() {
   ];
 
   const hassanTopList = [
-    '117774_anjaneya_service_station.html',
-    '117779_manjunatha_service_station.html',
-    '117782_t._eswarappa_&_bros.html',
-    '117783_sree_ramaprasad_service_stn..html',
-    '117787_kamadhenu_service_station_unit.html',
-    '117791__ganesh_filling_station.html',
-    '117810__sahyadri_service_station.html',
-    '117820_tibetan_prim._agri._credit_co.html',
-    '117832__sree_shankara_service_station.html',
-    '117835_udupi_krishna_fuel_station.html',
-    '117836__mookambika_service_station.html',
-    '117844__b.n.kamath_&_bros.html',
-    '117845__unity_service_centre.html',
-    '117850__raja_service_station.html',
-    '117853__shivagiri_service_station.html',
-    '118127__bhargavi_motor_fuels.html',
-    '118130_maruthyservicestation.html',
-    '118131_t.g.shadkaharappa&sons.html',
-    '118137__balaji_fuels.html',
-    '118139_bhavaniservicestation.html',
-    '118140__jyothi_service_station.html',
-    '118142_shankarservicestation.html',
-    '118156_btfuels.html',
-    '118158__bhadra_service_station.html',
-    '119999__kavitha_service_center.html',
-    '141446_bharath_matha_service_station.html',
-    '151258__kamadhenu_service_station.html',
-    '166396_chetan_service_station.html',
-    '178280__sri_gurushakthi_fuels_&_servic.html',
-    '187633__sri_ram_fuels.html',
-    '187653_srinivasaservicestation.html',
-    '188285__maruthi_fuels.html',
-    '188993_shankar_service_station.html',
-    '189191_bapujiindhanakendra.html',
-    '194094_nikhil_filling_station.html',
-    '194516_vyavasaya_seva_sahakara_bank_ltd.html',
-    '194551_v.k.dodde_gowda_&_co..html',
-    '194695_karanths_fuel_station.html',
-    '195004_basaveshwaraservicestation.html',
-    '196861__sree_h._ganapathiyappa_fuels.html',
-    '197908_bangarubasappaksk.html',
-    '198388_shri_siddhi_vinayaka_service_stn..html',
-    '198698_prajwalservicestation.html',
-    '199310_shri_kalmarudeshwara_fuel_centre.html',
-    '200790_shruthi_petroluems.html',
-    '202181_shridurgambikaksk.html',
-    '202452__moodabagilu_fuels.html',
-    '209325_ms_the_kodagu_coffee_growers_co.html',
-    '209420_parvathamma_fuel_service_stn.html',
-    '210250_nandi_agencies.html',
-    '211255__shree_shiva_fuel_station.html',
-    '213076_siddeshwarapetroleums.html',
-    '217556_vishwabandhupetroleums.html',
-    '217558_jyothiservicestation.html',
-    '217893__sree_ganesh_fuels.html',
-    '223736_sharanamaganurbasappa.html',
-    '225663__sri_siddhi_vybhavalakshmi_auto.html',
-    '226347_sri_byraveshwara_kisan_seva.html',
-    '226714_ajjayyafuels.html',
-    '231273__sree_chamundi_fuels.html',
-    '249490_srimanjunathaksk.html',
-    '252110__padmashree_service_station.html',
-    '252111__sigandhur_chowdeshwari_fuels.html',
-    '252683_suvarnaservicestation.html',
-    '253637_pragathi_sevice_station.html',
-    '253667_v.s.s.service_station.html',
-    '257248_pavanaksk.html',
-    '257976__susheelamma_subramani_service.html',
-    '258060_iranipetroleums.html',
-    '258075__raghava_fuels.html',
-    '261461_chimmy_fuels.html',
-    '262237_kottureshwarapetrolbunk.html',
-    '264188__abtn_fuels.html',
-    '264698_ranganathaksk.html',
-    '264783_gpsfillingstation.html',
-    '267593_t.j_petroleums.html',
-    '267618_sarovara_fuel_station.html',
-    '268384__seven_crores_service_station.html',
-    '270569_shrigurugaddigeshwaraksk.html',
-    '272804_shri_manjunatheshwara_fuel_station.html',
-    '272817_srivinayakafillingstation.html',
-    '274554_sreebalajipetroleum.html',
-    '276600__sri_guru_petroleum.html',
-    '276692_sri_durgadevi_serivce_station.html',
-    '276694__karnataka_service_station.html',
-    '276700__alageri_fuels_&_agro.html',
-    '277483_sumitra_agency.html',
-    '277616__lalitha_petroleum.html',
-    '278131_tapcms_kr_pet.html',
-    '278180__k.v.sarojini_giriraj_fuels.html',
-    '292390_sreenandishwarapetroleum.html',
-    '306932__shiva_shakthi_petroleum.html',
-    '307622_sri_raghavendra_fuel_station.html',
-    '326684_sri_lakshmi_venkateshwara_fuel_kaso.html',
-    '326801_indirafuels.html',
-    '329994__sri_shesha_sai_fuels.html',
-    '330813_srimylaralingeshwarapetroleums.html',
-    '331401_marulasiddeshwaraksk.html',
-    '333014__sn_bhadravathi_preminum_fuels.html',
-    '334048_basaveshwara_service_station.html',
-    '335718_shreebanashankarifillingstation.html',
-    '335745_sri_someshwara_fuels_station.html',
-    '335825__sri_basaveshwara_fuels.html',
-    '336472_ms_shri_ballekere_anjaneya_swamy_fuel.html',
-    '336606_sri_katte_parameshwari_fuel_station.html',
-    '337380_harishpatilenterprises.html',
-    '337631_chimma_s_fuel_station.html',
-    '338146_udhbava_ganapathi_petrol_bunk.html',
-    '338720__786_izaan_khan_fuels.html',
-    '338919_sri_shirdi_sai_traders.html',
-    '341778_srimalteshafillingstation.html',
-    '342136_ms_s_m_fuel_ksk.html',
-    '344013_patilfillingstation.html',
-    '345021_shobhafuels.html',
-    '345661__vasantha_fuels.html',
-    '346434_patelfuels.html',
-    '346548_ms_slr_fuels.html',
-    '347570_srisudarshanafillingstation.html',
-  ]
+    "117774_anjaneya_service_station.html",
+    "117779_manjunatha_service_station.html",
+    "117782_t._eswarappa_&_bros.html",
+    "117783_sree_ramaprasad_service_stn..html",
+    "117787_kamadhenu_service_station_unit.html",
+    "117791__ganesh_filling_station.html",
+    "117810__sahyadri_service_station.html",
+    "117820_tibetan_prim._agri._credit_co.html",
+    "117832__sree_shankara_service_station.html",
+    "117835_udupi_krishna_fuel_station.html",
+    "117836__mookambika_service_station.html",
+    "117844__b.n.kamath_&_bros.html",
+    "117845__unity_service_centre.html",
+    "117850__raja_service_station.html",
+    "117853__shivagiri_service_station.html",
+    "118127__bhargavi_motor_fuels.html",
+    "118130_maruthyservicestation.html",
+    "118131_t.g.shadkaharappa&sons.html",
+    "118137__balaji_fuels.html",
+    "118139_bhavaniservicestation.html",
+    "118140__jyothi_service_station.html",
+    "118142_shankarservicestation.html",
+    "118156_btfuels.html",
+    "118158__bhadra_service_station.html",
+    "119999__kavitha_service_center.html",
+    "141446_bharath_matha_service_station.html",
+    "151258__kamadhenu_service_station.html",
+    "166396_chetan_service_station.html",
+    "178280__sri_gurushakthi_fuels_&_servic.html",
+    "187633__sri_ram_fuels.html",
+    "187653_srinivasaservicestation.html",
+    "188285__maruthi_fuels.html",
+    "188993_shankar_service_station.html",
+    "189191_bapujiindhanakendra.html",
+    "194094_nikhil_filling_station.html",
+    "194516_vyavasaya_seva_sahakara_bank_ltd.html",
+    "194551_v.k.dodde_gowda_&_co..html",
+    "194695_karanths_fuel_station.html",
+    "195004_basaveshwaraservicestation.html",
+    "196861__sree_h._ganapathiyappa_fuels.html",
+    "197908_bangarubasappaksk.html",
+    "198388_shri_siddhi_vinayaka_service_stn..html",
+    "198698_prajwalservicestation.html",
+    "199310_shri_kalmarudeshwara_fuel_centre.html",
+    "200790_shruthi_petroluems.html",
+    "202181_shridurgambikaksk.html",
+    "202452__moodabagilu_fuels.html",
+    "209325_ms_the_kodagu_coffee_growers_co.html",
+    "209420_parvathamma_fuel_service_stn.html",
+    "210250_nandi_agencies.html",
+    "211255__shree_shiva_fuel_station.html",
+    "213076_siddeshwarapetroleums.html",
+    "217556_vishwabandhupetroleums.html",
+    "217558_jyothiservicestation.html",
+    "217893__sree_ganesh_fuels.html",
+    "223736_sharanamaganurbasappa.html",
+    "225663__sri_siddhi_vybhavalakshmi_auto.html",
+    "226347_sri_byraveshwara_kisan_seva.html",
+    "226714_ajjayyafuels.html",
+    "231273__sree_chamundi_fuels.html",
+    "249490_srimanjunathaksk.html",
+    "252110__padmashree_service_station.html",
+    "252111__sigandhur_chowdeshwari_fuels.html",
+    "252683_suvarnaservicestation.html",
+    "253637_pragathi_sevice_station.html",
+    "253667_v.s.s.service_station.html",
+    "257248_pavanaksk.html",
+    "257976__susheelamma_subramani_service.html",
+    "258060_iranipetroleums.html",
+    "258075__raghava_fuels.html",
+    "261461_chimmy_fuels.html",
+    "262237_kottureshwarapetrolbunk.html",
+    "264188__abtn_fuels.html",
+    "264698_ranganathaksk.html",
+    "264783_gpsfillingstation.html",
+    "267593_t.j_petroleums.html",
+    "267618_sarovara_fuel_station.html",
+    "268384__seven_crores_service_station.html",
+    "270569_shrigurugaddigeshwaraksk.html",
+    "272804_shri_manjunatheshwara_fuel_station.html",
+    "272817_srivinayakafillingstation.html",
+    "274554_sreebalajipetroleum.html",
+    "276600__sri_guru_petroleum.html",
+    "276692_sri_durgadevi_serivce_station.html",
+    "276694__karnataka_service_station.html",
+    "276700__alageri_fuels_&_agro.html",
+    "277483_sumitra_agency.html",
+    "277616__lalitha_petroleum.html",
+    "278131_tapcms_kr_pet.html",
+    "278180__k.v.sarojini_giriraj_fuels.html",
+    "292390_sreenandishwarapetroleum.html",
+    "306932__shiva_shakthi_petroleum.html",
+    "307622_sri_raghavendra_fuel_station.html",
+    "326684_sri_lakshmi_venkateshwara_fuel_kaso.html",
+    "326801_indirafuels.html",
+    "329994__sri_shesha_sai_fuels.html",
+    "330813_srimylaralingeshwarapetroleums.html",
+    "331401_marulasiddeshwaraksk.html",
+    "333014__sn_bhadravathi_preminum_fuels.html",
+    "334048_basaveshwara_service_station.html",
+    "335718_shreebanashankarifillingstation.html",
+    "335745_sri_someshwara_fuels_station.html",
+    "335825__sri_basaveshwara_fuels.html",
+    "336472_ms_shri_ballekere_anjaneya_swamy_fuel.html",
+    "336606_sri_katte_parameshwari_fuel_station.html",
+    "337380_harishpatilenterprises.html",
+    "337631_chimma_s_fuel_station.html",
+    "338146_udhbava_ganapathi_petrol_bunk.html",
+    "338720__786_izaan_khan_fuels.html",
+    "338919_sri_shirdi_sai_traders.html",
+    "341778_srimalteshafillingstation.html",
+    "342136_ms_s_m_fuel_ksk.html",
+    "344013_patilfillingstation.html",
+    "345021_shobhafuels.html",
+    "345661__vasantha_fuels.html",
+    "346434_patelfuels.html",
+    "346548_ms_slr_fuels.html",
+    "347570_srisudarshanafillingstation.html",
+  ];
 
   const gulbargaList = [
-'allamprabhu_petroleums.html',
-'baba_petroleums.html',
-'bhavani_petroleums.html',
-'coco_gulbarga_(adhoc_mouneshwara_fs).html',
-'deshmukh_rajgire_petroleums.html',
-'doddi_petroleums.html',
-'dv_sindol_service_station.html',
-'hms_petroleums.html',
-'jyoti_petroleum.html',
-'kastur_petroleums.html',
-'lakshmi_petroleums.html',
-'mahalaxmi_filling_station.html',
-'manohar_rao_naik_petroleums.html',
-'ketaki_sangameshwar_petroleum.html',
-'maisamma_petroleum.html',
-'sangameshwar_petroleums.html',
-'om_sai_petroleums.html',
-'parimala_ranganatha_f-s.html',
-'pavithra_filling_station.html',
-'pour_pay_-_ply_service_station.html',
-'prabhu_petroleums.html',
-'pranavnit_agencies.html',
-'routewise_gajanan_petroleum.html',
-'r_d_zabade_petroleums.html',
-'samarth_filling_station.html',
-'shivashakthi_petroleums.html',
-'shree_petroleum.html',
-'shree_sawaleshwar_petroleums.html',
-'shree_venketeshwar_filling_station.html',
-'shri_revanasiddeshwar_petroleums.html',
-'sri_krishnasagar_filling_station.html',
-'sri_mallikarjuna_petroleum.html',
-'sri_padmanabha_fuels.html',
-'sri_panchamukhi_filling_station.html',
-'sri_rama_filling_station.html',
-'subhadra_petroleum.html',
-'veenus_petroleum.html',
-'vishwa_jyothi_petrol_bunk.html',
-'v_v_more_petrol_pump.html',
-'yeragera_krishnaji_petrol_pump.html',
-  ]
+    "allamprabhu_petroleums.html",
+    "baba_petroleums.html",
+    "bhavani_petroleums.html",
+    "coco_gulbarga_(adhoc_mouneshwara_fs).html",
+    "deshmukh_rajgire_petroleums.html",
+    "doddi_petroleums.html",
+    "dv_sindol_service_station.html",
+    "hms_petroleums.html",
+    "jyoti_petroleum.html",
+    "kastur_petroleums.html",
+    "lakshmi_petroleums.html",
+    "mahalaxmi_filling_station.html",
+    "manohar_rao_naik_petroleums.html",
+    "ketaki_sangameshwar_petroleum.html",
+    "maisamma_petroleum.html",
+    "sangameshwar_petroleums.html",
+    "om_sai_petroleums.html",
+    "parimala_ranganatha_f-s.html",
+    "pavithra_filling_station.html",
+    "pour_pay_-_ply_service_station.html",
+    "prabhu_petroleums.html",
+    "pranavnit_agencies.html",
+    "routewise_gajanan_petroleum.html",
+    "r_d_zabade_petroleums.html",
+    "samarth_filling_station.html",
+    "shivashakthi_petroleums.html",
+    "shree_petroleum.html",
+    "shree_sawaleshwar_petroleums.html",
+    "shree_venketeshwar_filling_station.html",
+    "shri_revanasiddeshwar_petroleums.html",
+    "sri_krishnasagar_filling_station.html",
+    "sri_mallikarjuna_petroleum.html",
+    "sri_padmanabha_fuels.html",
+    "sri_panchamukhi_filling_station.html",
+    "sri_rama_filling_station.html",
+    "subhadra_petroleum.html",
+    "veenus_petroleum.html",
+    "vishwa_jyothi_petrol_bunk.html",
+    "v_v_more_petrol_pump.html",
+    "yeragera_krishnaji_petrol_pump.html",
+  ];
+
+  const hubliList = [
+    "bagalkot_210150_sai_petroleums.html",
+    "bagalkot_211603_amit_petrolium.html",
+    "bagalkot_235285_gururaj_petroleums.html",
+    "belgaum_128481_manager_(materials),_contracts_&_ma.html",
+    "belgaum_239161_shadab_petroleum.html",
+    "belgaum_263363_kamannavar_petroleum_ksk.html",
+    "belgaum_341993_shri_swayamjyoti_petroleum.html",
+    "belgaum_347604_ganesh_petroleum.html",
+    "belgaum_356371_gajanan_petroleum.html",
+    "bellary_136218_nmdc_(donimalai)_tin_29480_014104.html",
+    "bellary_181465_sri_pruthvi_trading_company.html",
+    "bellary_271734_pranavi_filling_station.html",
+    "bellary_273967_nireeksha_kisan_seva_kendra.html",
+    "bellary_315390_s.w._enterprises.html",
+    "bellary_329827_sri_guru_lingayyatata_petroleum.html",
+    "bijapur_117957_b.v.reshmi.html",
+    "bijapur_217907_shri_pawad_basaweshwara_petrol.html",
+    "chitradurga_118344_hanji_&_co..html",
+    "chitradurga_336779_tooba_fuels_&_auto_care.html",
+    "davangere_197908_bangar_basappa_kisan_seva_kendra.html",
+    "davangere_264041_sri_guru_thipperudra_swamy_ksk.html",
+    "dharwad_330073_sri_utsavamba_petroleums.html",
+    "gadag_325128_shree_ganesh_petroleums.html",
+    "haveri_213898_shree_siri_gowri_petroleum.html",
+    "koppal_232658_shobha_petroleum.html",
+    "koppal_271040_sri_t_shivayyaswamy_&_son_petr.html",
+    "raichur_118107_santosh_filling_station.html",
+    "raichur_152302_sri_mailaralingeshwara_filling_stn.html",
+    "raichur_191454_sri_satguru_nirupadeshwara_fs.html",
+    "raichur_211847_parimala_ranganatha_fs.html",
+    "raichur_271643_annadaneshwara_petrol_bunk.html",
+    "raichur_276004_golden_petroleum.html",
+    "raichur_348889_sion_sampoorna_filling_station.html",
+    "shimoga_217893_sree_ganesh_fuels.html",
+    "shimoga_258075_raghava_fuels.html",
+    "shimoga_338720_786_izaan_khan_fuels.html",
+    "shimoga_339001_daiwik_fuels.html",
+    "udupi_332115_kalyani_petroleum.html",
+    "uttar_kannad_117930_west_coast_paper_mill_employee.html",
+    "uttar_kannad_118117_nilekani_auto_fuels.html",
+    "uttar_kannad_197924_narayan_service_station.html",
+    "uttar_kannad_198559_yellapur_taluka_agriculturalpr.html",
+    "uttar_kannad_261285_sri_marikamba_service_station.html",
+    "vijayanagara_243457_sri_katte_basaveshwara_ksk.html",
+    "vijayanagara_249387_sri_vigneshwara_enterprises.html",
+    "vijayanagara_249489_uthsavamba_kisan_seva_kendra.html",
+    "vijayanagara_320351_raghavendra_petroleum.html",
+    "yadgir_358952_jeratagi_filling_station.html",
+  ];
 
   const [selectedDest, setSelectedDest] = useState(null);
   const [selectedTerminal, setSelectedTerminal] = useState(null);
@@ -2910,9 +2961,13 @@ function App() {
           label: "Hassan Top",
           value: "Hassan Top",
         },
-                {
+        {
           label: "Gulbarga Depot",
           value: "Gulbarga Depot",
+        },
+        {
+          label: "Hubli Depot",
+          value: "Hubli Depot",
         },
       ],
     },
@@ -2928,7 +2983,7 @@ function App() {
   const filter = (inputValue, path) =>
     path.some(
       (option) =>
-        option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1
+        option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1,
     );
   const legends = () => {
     return (
@@ -3126,8 +3181,8 @@ function App() {
             options={{
               strings: selectedTerminal
                 ? `IOCL - ${selectedTerminal[
-                  selectedTerminal.length - 1
-                ].toUpperCase()} - JRM`
+                    selectedTerminal.length - 1
+                  ].toUpperCase()} - JRM`
                 : "IOCL - JRM",
               pauseFor: 5000,
               autoStart: true,
@@ -3162,24 +3217,69 @@ function App() {
             selectedTerminal
               ? selectedTerminal[selectedTerminal.length - 1] === "All"
                 ? [
-                  ...coimbatoreList,
-                  ...maduraiList,
-                  ...trichyList,
-                  ...sankariList,
-                  ...asanurList,
-                ].map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Coimbatore Terminal" ? coimbatoreList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Madurai Terminal" ? maduraiList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Trichy Terminal" ? trichyList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Sankari Terminal" ? sankariList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Asanur Terminal" ? asanurList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Tondiarpet Terminal" ? tondiarpetList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Chennai FST" ? chennaiFstList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Tuticorin Terminal" ? tuticorinList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Patna Terminal" ? patnaList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Hassan Top" ? hassanTopList.map((item) => item.toUpperCase())
-                : selectedTerminal[selectedTerminal.length - 1] === "Gulbarga Depot" ? gulbargaList.map((item) => item.toUpperCase())
-                : []
+                    ...coimbatoreList,
+                    ...maduraiList,
+                    ...trichyList,
+                    ...sankariList,
+                    ...asanurList,
+                    ...tondiarpetList,
+                    ...chennaiFstList,
+                    ...tuticorinList,
+                    ...patnaList,
+                    ...hassanTopList,
+                    ...gulbargaList,
+                    ...hubliList,
+                  ].map((item) => item.toUpperCase())
+                : selectedTerminal[selectedTerminal.length - 1] ===
+                    "Coimbatore Terminal"
+                  ? coimbatoreList.map((item) => item.toUpperCase())
+                  : selectedTerminal[selectedTerminal.length - 1] ===
+                      "Madurai Terminal"
+                    ? maduraiList.map((item) => item.toUpperCase())
+                    : selectedTerminal[selectedTerminal.length - 1] ===
+                        "Trichy Terminal"
+                      ? trichyList.map((item) => item.toUpperCase())
+                      : selectedTerminal[selectedTerminal.length - 1] ===
+                          "Sankari Terminal"
+                        ? sankariList.map((item) => item.toUpperCase())
+                        : selectedTerminal[selectedTerminal.length - 1] ===
+                            "Asanur Terminal"
+                          ? asanurList.map((item) => item.toUpperCase())
+                          : selectedTerminal[selectedTerminal.length - 1] ===
+                              "Tondiarpet Terminal"
+                            ? tondiarpetList.map((item) => item.toUpperCase())
+                            : selectedTerminal[selectedTerminal.length - 1] ===
+                                "Chennai FST"
+                              ? chennaiFstList.map((item) => item.toUpperCase())
+                              : selectedTerminal[
+                                    selectedTerminal.length - 1
+                                  ] === "Tuticorin Terminal"
+                                ? tuticorinList.map((item) =>
+                                    item.toUpperCase(),
+                                  )
+                                : selectedTerminal[
+                                      selectedTerminal.length - 1
+                                    ] === "Patna Terminal"
+                                  ? patnaList.map((item) => item.toUpperCase())
+                                  : selectedTerminal[
+                                        selectedTerminal.length - 1
+                                      ] === "Hassan Top"
+                                    ? hassanTopList.map((item) =>
+                                        item.toUpperCase(),
+                                      )
+                                    : selectedTerminal[
+                                          selectedTerminal.length - 1
+                                        ] === "Gulbarga Depot"
+                                      ? gulbargaList.map((item) =>
+                                          item.toUpperCase(),
+                                        )
+                                      : selectedTerminal[
+                                            selectedTerminal.length - 1
+                                          ] === "Hubli Depot"
+                                        ? hubliList.map((item) =>
+                                            item.toUpperCase(),
+                                          )
+                                        : []
               : []
           }
           sx={{

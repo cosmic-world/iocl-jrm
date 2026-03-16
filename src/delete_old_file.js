@@ -5,11 +5,15 @@ const folderA = "E:/TNSO-JRM/sankari1"; // Path to Folder-A
 const folderB = "E:/iocl-jrm/public/asset"; // Path to Folder-B
 
 // Get list of PDF files from both folders
-const filesA = fs.readdirSync(folderA).filter(f => f.toLowerCase().endsWith(".pdf"));
-const filesB = fs.readdirSync(folderB).filter(f => f.toLowerCase().endsWith(".pdf"));
+const filesA = fs
+  .readdirSync(folderA)
+  .filter((f) => f.toLowerCase().endsWith(".pdf"));
+const filesB = fs
+  .readdirSync(folderB)
+  .filter((f) => f.toLowerCase().endsWith(".pdf"));
 
 // Convert Folder-A filenames to a Set for fast lookup (case-insensitive)
-const fileSetA = new Set(filesA.map(f => f.toLowerCase()));
+const fileSetA = new Set(filesA.map((f) => f.toLowerCase()));
 
 let deletedCount = 0;
 

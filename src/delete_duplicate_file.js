@@ -4,7 +4,7 @@ const path = require("path");
 const directory = "E:/iocl-jrm/public/asset"; // change this to your folder path
 
 // Get all PDF files
-const files = fs.readdirSync(directory).filter(f => f.endsWith(".pdf"));
+const files = fs.readdirSync(directory).filter((f) => f.endsWith(".pdf"));
 
 const customerMap = {};
 

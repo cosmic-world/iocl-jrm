@@ -86,3 +86,6 @@ add below two scripts inside package.json
 "deploy": "gh-pages -d build",
 
 npm run deploy
+
+npx prettier --write "src/**/*.{js,jsx,css}" <!-- for local -->
+prettier --write "src/**/*.{js,jsx,css}"  <!-- for global -->
